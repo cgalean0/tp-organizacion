@@ -107,36 +107,36 @@
 	<PunctChar char=";" use="comment" />
 
 	<!--......... machine instruction fields ............-->
-	<Field name="VALOR" type="required" numBits="10" relativity="absolute" signed="false" defaultValue="0" id="model.Field16437a99">
+	<Field name="VALOR" type="required" numBits="10" relativity="absolute" signed="false" defaultValue="0" id="model.Field71f50be1">
 	</Field>
-	<Field name="NOUSADO8" type="ignored" numBits="8" relativity="absolute" signed="false" defaultValue="0" id="model.Field78523e6a">
+	<Field name="NOUSADO8" type="ignored" numBits="8" relativity="absolute" signed="false" defaultValue="0" id="model.Field3df43e98">
 	</Field>
-	<Field name="REGISTRO2" type="required" numBits="2" relativity="absolute" signed="false" defaultValue="0" id="model.Field6a6d40b1">
+	<Field name="REGISTRO2" type="required" numBits="2" relativity="absolute" signed="false" defaultValue="0" id="model.Field12c3e654">
 		<FieldValue name="A" value="0" />
 		<FieldValue name="B" value="1" />
 		<FieldValue name="SP" value="2" />
 	</Field>
-	<Field name="TIPO" type="required" numBits="1" relativity="absolute" signed="false" defaultValue="0" id="model.Field704b3962">
+	<Field name="TIPO" type="required" numBits="1" relativity="absolute" signed="false" defaultValue="0" id="model.Field121be164">
 		<FieldValue name="I" value="0" />
 		<FieldValue name="D" value="1" />
 	</Field>
-	<Field name="NOUSADO11" type="ignored" numBits="11" relativity="absolute" signed="false" defaultValue="0" id="model.Field24cfa19b">
+	<Field name="NOUSADO11" type="ignored" numBits="11" relativity="absolute" signed="false" defaultValue="0" id="model.Field4b685ac5">
 	</Field>
-	<Field name="NOUSADO10" type="ignored" numBits="10" relativity="absolute" signed="false" defaultValue="0" id="model.Field4d077a06">
+	<Field name="NOUSADO10" type="ignored" numBits="10" relativity="absolute" signed="false" defaultValue="0" id="model.Field5774adce">
 	</Field>
-	<Field name="NOUSADO1" type="ignored" numBits="1" relativity="absolute" signed="false" defaultValue="0" id="model.Field4d6fc3df">
+	<Field name="NOUSADO1" type="ignored" numBits="1" relativity="absolute" signed="false" defaultValue="0" id="model.Field5a881032">
 	</Field>
-	<Field name="REGISTRO" type="required" numBits="1" relativity="absolute" signed="false" defaultValue="0" id="model.Field64467339">
+	<Field name="REGISTRO" type="required" numBits="1" relativity="absolute" signed="false" defaultValue="0" id="model.Field17d5cac6">
 		<FieldValue name="A" value="0" />
 		<FieldValue name="B" value="1" />
 	</Field>
-	<Field name="NOUSADO2" type="ignored" numBits="2" relativity="absolute" signed="false" defaultValue="0" id="model.Field3d5cc553">
+	<Field name="NOUSADO2" type="ignored" numBits="2" relativity="absolute" signed="false" defaultValue="0" id="model.Field1e62048b">
 	</Field>
-	<Field name="DIRECCION" type="required" numBits="10" relativity="absolute" signed="false" defaultValue="0" id="model.Field4b7d4fb4">
+	<Field name="DIRECCION" type="required" numBits="10" relativity="absolute" signed="false" defaultValue="0" id="model.Field6c8ac054">
 	</Field>
-	<Field name="NOUSADO12" type="ignored" numBits="12" relativity="absolute" signed="false" defaultValue="0" id="model.Field78bf0c3f">
+	<Field name="NOUSADO12" type="ignored" numBits="12" relativity="absolute" signed="false" defaultValue="0" id="model.Field76995477">
 	</Field>
-	<Field name="OPCODE" type="required" numBits="4" relativity="absolute" signed="false" defaultValue="0" id="model.Field2f3777aa">
+	<Field name="OPCODE" type="required" numBits="4" relativity="absolute" signed="false" defaultValue="0" id="model.Field4fa33398">
 	</Field>
 
 	<!--............. FileChannels .................-->
@@ -266,6 +266,18 @@
 	</FetchSequence>
 
 	<!--............. machine instructions ..........-->
+
+	<MachineInstruction name="SaveStack" opcode="f" instructionFormat="OPCODE REGISTRO VALOR NOUSADO1" assemblyFormat="OPCODE REGISTRO VALOR" instructionColors="#e886d8 #c7a6a2 #f5c7a6 #b986c7" assemblyColors="#e886d8 #c7a6a2 #f5c7a6" >
+		<Microinstruction microRef="model.microinstruction.CpusimSet6a11a2b3" />
+		<Microinstruction microRef="model.microinstruction.TransferRtoRbd8a3e2" />
+		<Microinstruction microRef="model.microinstruction.TransferRtoR4ab2f32d" />
+		<Microinstruction microRef="model.microinstruction.Arithmetic1bd7c501" />
+		<Microinstruction microRef="model.microinstruction.TransferRtoR2a15b4d7" />
+		<Microinstruction microRef="model.microinstruction.Test1680ad65" />
+		<Microinstruction microRef="model.microinstruction.TransferRtoR28be8bb2" />
+		<Microinstruction microRef="model.microinstruction.MemoryAccess59989382" />
+		<Microinstruction microRef="model.microinstruction.End34fb9305" />
+	</MachineInstruction>
 
 	<MachineInstruction name="LoadStack" opcode="e" instructionFormat="OPCODE REGISTRO VALOR NOUSADO1" assemblyFormat="OPCODE REGISTRO VALOR" instructionColors="#fb95be #d9b68a #a9a488 #fcfd97" assemblyColors="#fb95be #d9b68a #a9a488" >
 		<Microinstruction microRef="model.microinstruction.CpusimSet6a11a2b3" />
