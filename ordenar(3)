@@ -20,14 +20,21 @@ ordenar:    ; sub1
         LoadStack A 10
         LoadStack B 8
         SubR A B
-        JG intercambiar
+        JG hacerIntercambio
+        Jump restaurar
+hacerIntercambio:
+Call intercambiar
+Jump fin
+restaurar:
+LoadStack A 10
+fin:
         Pop BP
         Ret
         intercambiar:   ;sub3
             Push BP
             Move BP SP
-            LoadStack A 10
-            LoadStack B 12
+            LoadStack A 12
+            LoadStack B 14
             Pop BP
             Ret
 
