@@ -1,0 +1,22 @@
+;progama factorial
+In A
+Push A
+Call Factorial
+Add SP 2
+Out A
+Stop
+    Factorial:
+    Push BP
+    Move BP SP
+    LoadStack A 4
+    JumpZ casoBase ; si A=0, vamos al CB
+
+    Push A ; guardo mi A original en var loc.
+    Sub A 1 ;  le resto 1 al A original
+    Push A ; A-1 guardo en var loc.
+    Call Factorial ;recursivamente con ya A-1
+    
+    Move B A ; uso B como registro para guardar A-1
+    Pop A ; ya que A tenia n-1 y ahora va a tener A
+    
+    
