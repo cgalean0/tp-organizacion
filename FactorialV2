@@ -3,6 +3,7 @@ In A ; Valor del cual queremos calcular el Fatorial
 Push A
 Call factorial
 Add SP 2 I ;Limpiamos la pila
+Out A ; Resultado Final del fact(n)
 Stop ; fin de la ejecucion
 
 
@@ -12,16 +13,23 @@ factorial:
         Push BP
         Move BP SP
         Add SP -2 I ;Almaceno 1 byte para variables locales
-    
-        LoadStack A 4 ; Cargamos de la pila el n
         ; Por defecto asumimos que el fact(0) = 1        
-        ;JumpZ fin
         Add A -1 I ; Restamos para obtener (n - 1)
-        JumpZ calcular ; Si A == 0 no podemos seguir
+        JumpZ caso_base ; Si A == 0 llegamos al caso base
         SaveStack A -2 ; Guardamos en el espacio de var local a (n - 1)
-        Call factorial ; Hacemos la recursion
-calcular:
-        Add A 1 I ; Sumamos uno al A
-        LoadStack B 4 
+        LoadStack B -2; ? Necesitamos guardar en B El valor anterior a multiplicar
+        Call factorial ; Hacemos la recursion para calcular a (n - 1)
+        LoadStack A 4
         Mul A B ; A * B => A
-        SaveStack A 4;
+        Move B A ; Movemos el resultado de A en B
+        SaveStack A 4 ;
+
+        Jump fin_factorial
+        
+caso_base:
+        Add A 1 I  ; Solo para resetear el A a 1
+
+fin_factorial:
+        Add SP 2 I  ;Limpiamos variables locales
+        Pop BP
+        Ret
