@@ -1,0 +1,27 @@
+; Programa que calcula recursivamente el factorial de un numero
+In A ; Valor del cual queremos calcular el Fatorial
+Push A
+Call factorial
+Add SP 2 I ;Limpiamos la pila
+Stop ; fin de la ejecucion
+
+
+;Subrutina que calcula el factorial de un numero
+; fact(n) = n * fact(n - 1)
+factorial: 
+        Push BP
+        Move BP SP
+        Add SP -2 I ;Almaceno 1 byte para variables locales
+    
+        LoadStack A 4 ; Cargamos de la pila el n
+        ; Por defecto asumimos que el fact(0) = 1        
+        ;JumpZ fin
+        Add A -1 I ; Restamos para obtener (n - 1)
+        JumpZ calcular ; Si A == 0 no podemos seguir
+        SaveStack A -2 ; Guardamos en el espacio de var local a (n - 1)
+        Call factorial ; Hacemos la recursion
+calcular:
+        Add A 1 I ; Sumamos uno al A
+        LoadStack B 4 
+        Mul A B ; A * B => A
+        SaveStack A 4;
