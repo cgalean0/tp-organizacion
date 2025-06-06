@@ -107,41 +107,41 @@
 	<PunctChar char=";" use="comment" />
 
 	<!--......... machine instruction fields ............-->
-	<Field name="DIRECCION9" type="required" numBits="9" relativity="absolute" signed="false" defaultValue="0" id="model.Field6e0e480f">
+	<Field name="DIRECCION9" type="required" numBits="9" relativity="absolute" signed="false" defaultValue="0" id="model.Field191fe093">
 	</Field>
-	<Field name="OPCODE2" type="required" numBits="5" relativity="absolute" signed="false" defaultValue="0" id="model.Field46f54ba2">
+	<Field name="OPCODE2" type="required" numBits="5" relativity="absolute" signed="false" defaultValue="0" id="model.Field5a3a784e">
 	</Field>
-	<Field name="VALOR" type="required" numBits="10" relativity="absolute" signed="false" defaultValue="0" id="model.Field637d277a">
+	<Field name="VALOR" type="required" numBits="10" relativity="absolute" signed="false" defaultValue="0" id="model.Field6d415322">
 	</Field>
-	<Field name="NOUSADO8" type="ignored" numBits="8" relativity="absolute" signed="false" defaultValue="0" id="model.Field1886a443">
+	<Field name="NOUSADO8" type="ignored" numBits="8" relativity="absolute" signed="false" defaultValue="0" id="model.Field6d8fbbf5">
 	</Field>
-	<Field name="REGISTRO2" type="required" numBits="2" relativity="absolute" signed="false" defaultValue="0" id="model.Field454d96c">
+	<Field name="REGISTRO2" type="required" numBits="2" relativity="absolute" signed="false" defaultValue="0" id="model.Fieldb72d5af">
 		<FieldValue name="BP" value="3" />
 		<FieldValue name="A" value="0" />
 		<FieldValue name="B" value="1" />
 		<FieldValue name="SP" value="2" />
 	</Field>
-	<Field name="TIPO" type="required" numBits="1" relativity="absolute" signed="false" defaultValue="0" id="model.Field68103a1f">
+	<Field name="TIPO" type="required" numBits="1" relativity="absolute" signed="false" defaultValue="0" id="model.Field2033487">
 		<FieldValue name="I" value="1" />
 		<FieldValue name="D" value="0" />
 	</Field>
-	<Field name="NOUSADO11" type="ignored" numBits="11" relativity="absolute" signed="false" defaultValue="0" id="model.Field625c8690">
+	<Field name="NOUSADO11" type="ignored" numBits="11" relativity="absolute" signed="false" defaultValue="0" id="model.Field653cafa6">
 	</Field>
-	<Field name="NOUSADO10" type="ignored" numBits="10" relativity="absolute" signed="false" defaultValue="0" id="model.Field4fd59224">
+	<Field name="NOUSADO10" type="ignored" numBits="10" relativity="absolute" signed="false" defaultValue="0" id="model.Field757cf0e7">
 	</Field>
-	<Field name="NOUSADO1" type="ignored" numBits="1" relativity="absolute" signed="false" defaultValue="0" id="model.Field6d68bd0b">
+	<Field name="NOUSADO1" type="ignored" numBits="1" relativity="absolute" signed="false" defaultValue="0" id="model.Field68be9c4a">
 	</Field>
-	<Field name="REGISTRO" type="required" numBits="1" relativity="absolute" signed="false" defaultValue="0" id="model.Field441b27b">
+	<Field name="REGISTRO" type="required" numBits="1" relativity="absolute" signed="false" defaultValue="0" id="model.Field73022ad6">
 		<FieldValue name="A" value="0" />
 		<FieldValue name="B" value="1" />
 	</Field>
-	<Field name="NOUSADO2" type="ignored" numBits="2" relativity="absolute" signed="false" defaultValue="0" id="model.Field2afcc65">
+	<Field name="NOUSADO2" type="ignored" numBits="2" relativity="absolute" signed="false" defaultValue="0" id="model.Field7343ea8f">
 	</Field>
-	<Field name="DIRECCION" type="required" numBits="10" relativity="absolute" signed="false" defaultValue="0" id="model.Field61083aa6">
+	<Field name="DIRECCION" type="required" numBits="10" relativity="absolute" signed="false" defaultValue="0" id="model.Field61aac7c8">
 	</Field>
-	<Field name="NOUSADO12" type="ignored" numBits="12" relativity="absolute" signed="false" defaultValue="0" id="model.Field49a04369">
+	<Field name="NOUSADO12" type="ignored" numBits="12" relativity="absolute" signed="false" defaultValue="0" id="model.Field7dea4b7b">
 	</Field>
-	<Field name="OPCODE" type="required" numBits="4" relativity="absolute" signed="false" defaultValue="0" id="model.Field40fbe24c">
+	<Field name="OPCODE" type="required" numBits="4" relativity="absolute" signed="false" defaultValue="0" id="model.Field1f5c9a8a">
 	</Field>
 
 	<!--............. FileChannels .................-->
@@ -188,7 +188,7 @@
 	<Test name="&lt;IR[4..5]==SP&gt;(10)" register="model.module.Register2851143d" start="4" numBits="2" comparison="EQ" value="2" omission="8" id="model.microinstruction.Test7841814e" />
 	<Test name="&lt;IR[4]==0&gt;(1)" register="model.module.Register2851143d" start="4" numBits="1" comparison="EQ" value="0" omission="1" id="model.microinstruction.Test409ac7d2" />
 	<Test name="&lt;IR[4]==0&gt;(2)" register="model.module.Register2851143d" start="4" numBits="1" comparison="EQ" value="0" omission="2" id="model.microinstruction.Test372d14bf" />
-	<Test name="&lt;IR[5]==0&gt;(1)" register="model.module.Register2851143d" start="5" numBits="1" comparison="EQ" value="0" omission="1" id="model.microinstruction.Test25e4da6c" />
+	<Test name="&lt;IR[5]==0&gt;(1)" register="model.module.Register2851143d" start="6" numBits="1" comparison="EQ" value="0" omission="1" id="model.microinstruction.Test25e4da6c" />
 	<Test name="&lt;IR[5]==0&gt;(2)" register="model.module.Register2851143d" start="5" numBits="1" comparison="EQ" value="0" omission="2" id="model.microinstruction.Test1a475ff1" />
 	<Test name="&lt;IR[5]==A&gt;()" register="model.module.Register2851143d" start="5" numBits="1" comparison="EQ" value="0" omission="0" id="model.microinstruction.Test43987cd8" />
 
