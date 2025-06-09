@@ -1,3 +1,4 @@
+; Programa encargado de ordenar dos numeros en orden ascendente
 In A
 In B
 Push A
@@ -8,20 +9,21 @@ Out A
 Out B
 Stop
 
-ordenar:    ; sub1
+; subrutina principal encargada de la tarea ordenar
+ordenar: 
     Push BP
     Move BP SP
     Call comparar
     Pop BP
     Ret
-
-comparar:   ;sub2
+; subrutina encargada de comparar ambos numeros
+comparar:
     Push BP 
     Move BP SP
     LoadStack A 10
     LoadStack B 8
     SubR A B
-    JG hacerIntercambio
+    JG hacerIntercambio ; Si el valor en el registro A es mayor al del B saltamos a hacer el intercambio
     Jump restaurar
 
 hacerIntercambio:

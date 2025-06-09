@@ -13,6 +13,7 @@ factorial:
         Push BP
         Move BP SP
         Add SP -2 I ;Almaceno 1 byte para variables locales
+        JumpZ caso_base ; si el parametro pasado es cero salto al caso base
         ; Por defecto asumimos que el fact(0) = 1        
         Add A -1 I ; Restamos para obtener (n - 1)
         JumpZ caso_base ; Si A == 0 llegamos al caso base
