@@ -3,7 +3,7 @@ In B
 Push A
 Push B
 Call ordenar    ;llama a ordenar
-Add SP 4 
+Add SP 4 I
 Out A
 Out B
 Stop
@@ -14,29 +14,33 @@ ordenar:    ; sub1
     Call comparar
     Pop BP
     Ret
-    comparar:   ;sub2
-        Push BP 
-        Move BP SP
-        LoadStack A 10
-        LoadStack B 8
-        SubR A B
-        JG hacerIntercambio
-        Jump restaurar
+
+comparar:   ;sub2
+    Push BP 
+    Move BP SP
+    LoadStack A 10
+    LoadStack B 8
+    SubR A B
+    JG hacerIntercambio
+    Jump restaurar
+
 hacerIntercambio:
-Call intercambiar
-Jump fin
+    Call intercambiar
+    Jump fin
+
 restaurar:
-LoadStack A 10
+    LoadStack A 10
+
 fin:
-        Pop BP
-        Ret
-        intercambiar:   ;sub3
-            Push BP
-            Move BP SP
-            LoadStack A 12
-            LoadStack B 14
-            Pop BP
-            Ret
+    Pop BP
+    Ret
+intercambiar:   ;sub3
+    Push BP
+    Move BP SP
+    LoadStack A 12
+    LoadStack B 14
+    Pop BP
+    Ret
 
             
         
