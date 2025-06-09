@@ -1,3 +1,4 @@
+
 # Procesador P1 v3
 El principal objetivo del proyecto es dotar al modelo de procesador P1 que estuvimos desarrollando durante las prácticas de microinstrucciones y de subrutinas con instrucciones que permitan completar las funcionalidades de la pila (*Stack*) comunes en otras arquitecturas. Esto permitirá por ejemplo agregar la posibilidad de trabajar con subrutinas que tomen parámetros de la Pila y que puedan establecer espacios de memoria locales. 
 ## Integrantes:
@@ -38,8 +39,9 @@ Calcula el factorial de un número positivo mayor  o igual a cero que el usuario
 ## Mas información sobre la construcción
 
 Utilizamos **p1** como la máquina de nuestro proyecto, que usa una arquitectura de 16 bits, con 4 bit de tamaño de instruccion(opcode), se le agregaron las instrucciones pedidas para el proyecto `LoadStack, SaveStack` además de las otras que ya habíamos realizado durante las prácticas y nos encontramos con una situación en la que ya no podiamos agregar más instrucciones porque el hardware definido nos limitaba solo a 16 instrucciones, debatimos dos opciones; 
- - Una era agrandar el tamaño de instrucción, lo cual nos flexibilizaría a la hora de crear más instrucciones, pero esto nos traería el trabajo de modificar todas las intrucciones y microinstrucciones ya existentes lo cual iba a ser muy tedioso.
- - La otra opción, más viable, era eliminar alguna instrucción que no iríamos a usar para ninguno de los dos programas a realizar. 
+> Una era agrandar el tamaño de instrucción, lo cual nos flexibilizaría a la hora de crear más instrucciones, pero esto nos traería el trabajo de modificar todas las intrucciones y microinstrucciones ya existentes lo cual iba a ser muy tedioso.
+> La otra opción, más viable, era eliminar alguna instrucción que no iríamos a usar para ninguno de los dos programas a realizar. 
+
 Se decidió que eliminar instrucciones que no fueramos a usar era la mejor opción, fue entonces que optamos por reemplazar las intrucciones:
 - `Load`
 - `Save`
