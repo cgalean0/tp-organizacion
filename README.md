@@ -10,7 +10,7 @@ El principal objetivo del proyecto es dotar al modelo de procesador P1 que estuv
 El Software utilizado para la creación de este procesador fue  `CpuSim 4.0.11`.
 Todos los archivos necesario en cuanto a el procesador y los pogramas se encuentran en esta carpeta
 
-### Programa 1 - Ordenar Números
+### Programa 1 - Ordenar Números (ordenar(3))
 ---
 Realiza el orden de dos elementos que el usuario introduzca, el primer input se almacena en el registro A y el segundo en B. Al terminar la ejecución, se almacenará en A el entero menor y en B el entero mayor, y devolverá primer el menor numero y despues el mayor. Este programa utiliza anidamiento de subrutinas de nivel 3.
 Ejemplo:
@@ -25,7 +25,7 @@ Ejemplo:
 
 
 ---
-### Programa 2 - Calcular Factorial
+### Programa 2 - Calcular Factorial (FactorialV2)
 ---
 Calcula el factorial de un número positivo mayor  o igual a cero que el usuario introduzca mediante el input. Este programa utiliza la pila de recursión mediante la invocación recursiva de la subrutina y da uso de variables locales.  
 
